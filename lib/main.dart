@@ -72,6 +72,11 @@ class _MyHomePageState extends State<MyHomePage> {
       _counter--;
     });
   }
+  void _resetCounter() {
+    setState(() {
+      _counter = 0;
+    });
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -127,14 +132,25 @@ class _MyHomePageState extends State<MyHomePage> {
             child: const Icon(Icons.add),
             ),
 
-            const SizedBox(width: 10,),
+            const SizedBox(width: 10),
 
             FloatingActionButton(
               onPressed: _decrementCounter,
               tooltip: 'decremento',
               child: const Icon(Icons.remove),
+              ),
+
+              if(_counter != 0)
+              const SizedBox(width: 10),
+              
+              if(_counter != 0)
+              FloatingActionButton(
+              onPressed: _resetCounter,
+              tooltip: 'resetar',
+              child: const Icon(Icons.refresh),
               )
         ],
+
       ),
     );
   }
