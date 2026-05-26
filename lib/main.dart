@@ -126,29 +126,31 @@ class _MyHomePageState extends State<MyHomePage> {
       floatingActionButton: Row(
         mainAxisAlignment: MainAxisAlignment.end,
         children: [
-          FloatingActionButton(
-            onPressed: _incrementCounter,
-            tooltip: 'incremento',
-            child: const Icon(Icons.add),
-            ),
-
-            const SizedBox(width: 10),
-
-            FloatingActionButton(
+              if(_counter != 0) ...[
+                FloatingActionButton(
+              onPressed: _resetCounter,
+              tooltip: 'resetar',
+              child: const Icon(Icons.refresh),
+              ),
+              const SizedBox(width: 10),
+              FloatingActionButton(
               onPressed: _decrementCounter,
               tooltip: 'decremento',
               child: const Icon(Icons.remove),
               ),
 
-              if(_counter != 0)
+              ],
+            
+
               const SizedBox(width: 10),
+
+            FloatingActionButton(
+            onPressed: _incrementCounter,
+            tooltip: 'incremento',
+            child: const Icon(Icons.add),
+            ),
+
               
-              if(_counter != 0)
-              FloatingActionButton(
-              onPressed: _resetCounter,
-              tooltip: 'resetar',
-              child: const Icon(Icons.refresh),
-              )
         ],
 
       ),
