@@ -6,6 +6,8 @@ class Candidate {
   String course;
   int graduationYear;
   bool available;
+  List<String> technicalSkills;
+  List<String> softSkills;
 
 
   //construtor
@@ -16,6 +18,9 @@ class Candidate {
     required this.course,
     required this.graduationYear,
     required this.available,
+    required this.technicalSkills,
+    required this.softSkills
+
   });
 
   static List<Candidate> candidates(){
@@ -26,17 +31,21 @@ class Candidate {
          email: "nayla.gabrielle@ma.senac.br", 
          course: "Técnico em Informática para Internet", 
          graduationYear: 2026, 
-         available: true
+         available: true,
+         technicalSkills: ["Html", "Css", "Javascript", "Php"],
+         softSkills: ["Pensamento Crítico", "Adaptabilidade", "Empatia"]
          ),
 
       Candidate(
         name: "Joao pedro",
         document: "01254125898",
         email: "joaopedro@gmail.com",
-        course: "Tec. em inf para internet",
+        course: "Tecnico em Informatica para Internet",
         graduationYear: 2026,
-        available: false
-       ),
+        available: true,
+        technicalSkills: ["Html","Css","JavaScript","Php","Ia"],
+        softSkills: ["Proativo","Organização de tarefas", "Gestão do tempo", "Planejamento","Criatividade"]
+      ),
 
       Candidate(
       name: "Nayra Sousa",
@@ -44,7 +53,9 @@ class Candidate {
        email: "nararodrygues530@gmail.com",
         course: "técnico Em informática para internet", 
         graduationYear: 2026,
-         available: true
+         available: true,
+         technicalSkills: ["Html", "Css", "Javascript", "Php", "Ia" "Informática básica", "Recepção"],
+         softSkills: ["impaciente","agilidosa","competente","responsável"]
          ),
 
       Candidate(
@@ -54,6 +65,8 @@ class Candidate {
       course: "Tecnico em Informatica para Internet",
       graduationYear: 2026,
       available: false,
+      technicalSkills: ["Php", "Html/Css", "Flutter", "Dart"],
+      softSkills: ["Comunicação","Resolução de problemas", "Adaptação", "Liderança"]
     ),
 
       Candidate(
@@ -63,6 +76,8 @@ class Candidate {
         course: "Técnico em Informática para internet",
         available: true,
         graduationYear: 2026,
+        technicalSkills: [ "Html","Tailwindcss", "Javascript","Typescripr","Php", "React", "Next.js","Node.js","Mysql","Mongodb","Deploy", ],
+        softSkills: [ "Foco em resultados","Proativo", "Facilidade em aprender","Pensamento crítico","Busca por inovação",],
       ),
 
        Candidate(
@@ -71,7 +86,9 @@ class Candidate {
         email: "ezequiel25@gmail.com",
         course: "Técnico em Informática para Internet",
         graduationYear: 2026,
-        available: false
+        available: false,
+        technicalSkills: ["Html", "Css", "Javascript", "Tecnico em Recursos Humanos"],
+        softSkills: ["Criativo", "Empatia", "Paciente"]
       )
     ];
   }
